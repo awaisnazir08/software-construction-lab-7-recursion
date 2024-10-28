@@ -13,6 +13,9 @@ def generate_permutations_recursive(s):
     if len(s) == 1:  # Base case: single character
         return [s]
 
+    if not s:
+        return ""
+
     perms = []  # List to store permutations
     for i, char in enumerate(s):
         # Exclude current character and get permutations of the remaining part
